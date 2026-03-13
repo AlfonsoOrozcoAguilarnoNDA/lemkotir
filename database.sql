@@ -56,7 +56,23 @@ CREATE TABLE `LINKS` (
   CONSTRAINT `LINKS_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `LINK_CATEGORIES` (`category_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
+CREATE TABLE IF NOT EXISTS ai_backups ( id INT AUTO_INCREMENT PRIMARY KEY, 
+    proyecto VARCHAR(100), 
+    ia_utilizada VARCHAR(50), 
+    tipo VARCHAR(20), contenido LONGTEXT,
+    nombre_archivo VARCHAR(150), 
+    num_version DECIMAL(14,6), 
+    comentarios LONGTEXT, 
+    calificacion DECIMAL(14,6),
+    visible VARCHAR(2), 
+    fecha DATETIME, contrasena_ver VARCHAR(255), 
+    tamanio DECIMAL(14,6), hash_md5 VARCHAR(32), 
+    hash_sha1 VARCHAR(40), 
+    INDEX idx_proyecto (proyecto), 
+    INDEX idx_tipo (tipo), 
+    INDEX idx_visible (visible),
+    INDEX idx_fecha (fecha) )
+    ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================================
 -- SQL PARA CREAR USUARIO newadmin CON PASSWORD HASHEADO
