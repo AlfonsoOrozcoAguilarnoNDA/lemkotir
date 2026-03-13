@@ -59,7 +59,11 @@ Pantalla de cambio de password con validación de identidad y migración automá
 
 ### 4. Auditoría Técnica (Revisabom)
 Monitor de salud del sistema. Verifica integridad de archivos, conteo de líneas y licencias GPL.
-![Auditoría](pantalla%20revisabom.png)
+![Auditoría](pantallarevisabom.png)
+
+### 5. Mosaicos PGP (muestra_mosaicosphp)
+Monitor de salud del sistema. permite ver archivos pgp con fechade modificacion.
+![Auditoría](pantallamosaicos.png)
 
 ---
 
