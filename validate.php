@@ -32,6 +32,8 @@ header('Expires: 0');
 // Configuración de fondo (cambiar a true para usar tapiz)
 $USAR_TAPIZ = false; // Cambiar a true si quiere usar imagen de fondo
 $TAPIZ_URL = 'ruta/a/tu/imagen.jpg'; // URL de la imagen de fondo
+$TAPIZ_URL = 'horses.jpg'; // URL de la imagen de fondo
+$TAPIZ_URL = 'cool-gray.jpg'; // URL de la imagen de fondo
 
 // Mensaje informativo (configurable)
 $MENSAJE_INFO = "Se les recuerda que hoy la salida a las 14:00 porque van a fumigar";
@@ -50,7 +52,7 @@ function getDB() {
             $password = 'tu_password';
             
             $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
-            $pdo = new PDO($dsn, $username, $password, [
+ $pdo = new PDO($dsn, $username, $password, [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_EMULATE_PREPARES => false
@@ -173,17 +175,20 @@ if ($module === 'dashboard' && !$isLoggedIn) {
         }
         
         /* Gradiente metálico azul/gris profesional */
-        .login-background {
-            <?php if ($USAR_TAPIZ && !empty($TAPIZ_URL)): ?>
-            background: url('<?php echo $TAPIZ_URL; ?>') no-repeat center center;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            <?php else: ?>
-            background: linear-gradient(135deg, #1a2a6c 0%, #2c3e50 50%, #4a69bd 100%);
-            min-height: 100vh;
-            <?php endif; ?>
-        }
+      /* Ajuste para que el tapiz respete la imagen de fondo */
+.login-background {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Prioridad al tapiz si está activo, sino el gradiente metálico */
+    background: <?php echo ($USAR_TAPIZ && !empty($TAPIZ_URL)) 
+        ? "url('$TAPIZ_URL') no-repeat center center fixed" 
+        : "linear-gradient(135deg, #1a2a6c 0%, #2c3e50 50%, #4a69bd 100%)"; ?>;
+    background-size: cover;
+}
         
         <?php if ($USAR_TAPIZ): ?>
         .login-background::before {
@@ -358,7 +363,8 @@ if ($module === 'dashboard' && !$isLoggedIn) {
                     <div class="alert alert-info alert-message mb-3">
                         <i class="fas fa-info-circle mr-2"></i><?php echo htmlspecialchars($MENSAJE_INFO); ?>
                     </div>
-                    <?php endif; ?>                    
+                    <?php endif; ?>
+                    
                     <!-- Formulario de Login -->
                     <form method="POST" action="?module=validate">
                         <div class="form-group mb-3">
@@ -539,16 +545,3 @@ if ($module === 'dashboard' && !$isLoggedIn) {
 
 </body>
 </html>
-
-<?php
-/* 
-====================================================================
-SQL PARA CREAR USUARIO newadmin CON PASSWORD HASHEADO
-====================================================================
-
--- Password: lemkotir* (hasheado con bcrypt)
--- El hash generado es: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-
--- Ejemplo de inserción:
-*/
-?>
