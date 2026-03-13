@@ -36,7 +36,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header('Location: validate.php?module=login');
     exit;
 }
-
+include_once 'config.php';
 $module = isset($_GET['module']) ? $_GET['module'] : 'changepass';
 
 // Configuración de fondo (mismas variables del sistema principal)
@@ -129,7 +129,7 @@ if ($module === 'changepass' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 // Si viene de logout, destruir sesión
 if ($module === 'logout') {
     session_destroy();
-    header('Location: ?module=login');
+    header('Location: validate.php?module=login');
     exit;
 }
 
