@@ -21,6 +21,7 @@ Como parte de este experimento de co-programación, documentamos las fallas actu
 * **Numero de bases ** Tenemos pendiente verificar que reporte bien registros en tablas, en la parte de diagnostico. Se deja asi porque de momento solo hay una tabla.
 * **Ajustar Colores ** Mejorar loscolores de botones en permisos.php.
 
+** Todas las pruebasde celular se haranal terminar de unficar, no tiene caso trabajar dos veces ** 
 
 ---
 
