@@ -95,8 +95,14 @@ if ($module === 'validate' && $_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([':username' => $username]);
             $user = $stmt->fetch();
             
-            if ($user) {
+            if ($user) {               
                 // Validar contra password_2026 (nuevo hash)
+                /*$uno=$user['password_2026'];
+                $dos=password_hash($uno, PASSWORD_DEFAULT);
+                die("$password $uno $dos");
+                */
+  
+                /*
                 if (!empty($user['password_2026'])) {
                     if (password_verify($password, $user['password_2026'])) {
                         $success = true;
@@ -108,6 +114,25 @@ if ($module === 'validate' && $_SERVER['REQUEST_METHOD'] === 'POST') {
                         $success = true;
                     }
                 }
+                */
+                // gemini
+     
+    $success = false;
+
+    // 1. Intentar con el hash moderno (2026)
+    if (!empty($user['password_2026'])) {
+        if (password_verify($password, $user['password_2026'])) {
+            $success = true;
+        }
+    }
+
+    // 2. Si no ha tenido éxito, intentar con el legacy (solo si success sigue siendo false)
+    if (!$success && !empty($user['password'])) {
+        // Soporta tanto hash como texto plano (para esa importación que mencionaste)
+        if (password_verify($password, $user['password']) || $password === $user['password']) {
+            $success = true;
+        }
+    }
                 
                 if ($success) {
                     $_SESSION['user_id'] = $user['id'];
