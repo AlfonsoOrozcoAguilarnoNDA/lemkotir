@@ -98,8 +98,8 @@ if ($module === 'changepass' && $_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Generar nuevo hash BCrypt
                 $nuevo_hash = password_hash($password_nuevo, PASSWORD_BCRYPT);
                 
-                // Actualizar: nuevo hash en password_2026, marcar password como MIGRADO
-                $sql_update = "UPDATE cat_users SET password = 'MIGRADO', password_2026 = ? WHERE id = ?";
+                // Actualizar: nuevo hash en password_2026, marcar password como null
+                $sql_update = "UPDATE cat_users SET password = null, password_2026 = ? WHERE id = ?";
                 $stmt_update = mysqli_prepare($link, $sql_update);
                 mysqli_stmt_bind_param($stmt_update, 'si', $nuevo_hash, $user_id);
                 
