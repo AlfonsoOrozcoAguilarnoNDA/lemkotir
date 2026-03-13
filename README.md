@@ -18,10 +18,10 @@ Como parte de este experimento de co-programación, documentamos las fallas actu
 * **upload_pherfil.php:** Actualmente no muestrael perfil por default.
 * **Optimización de Archivos:** De momento, el sistema es "verbose" (un solo archivo por función). En la siguiente fase, comprimiremos la lógica en menos archivos para mejorar la mantenibilidad.
 * **Prioridad Gráfica:** El enfoque actual es **100% estético y funcional en el frontend**. La depuración profunda de lógica de negocio se realizará una vez consolidada la interfaz de usuario.
-* **Numero de bases ** Tenemos pendiente verificar que reporte bien registros en tablas, en la parte de diagnostico. Se deja asi porque de momento solo hay una tabla.
-* **Ajustar Colores ** Mejorar loscolores de botones en permisos.php.
+* **Numero de bases** Tenemos pendiente verificar que reporte bien registros en tablas, en la parte de diagnostico. Se deja asi porque de momento solo hay una tabla.
+* **Ajustar Colores** Mejorar loscolores de botones en permisos.php.
 
-* ** Todas las pruebasde celular se haranal terminar de unficar, no tiene caso trabajar dos veces ** 
+* **Todas las pruebasde celular se haranal terminar de unficar, no tiene caso trabajar dos veces** 
 
 ---
 
