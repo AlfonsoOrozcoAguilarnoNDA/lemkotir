@@ -23,6 +23,16 @@ PRIMARY KEY (`id`),
 UNIQUE KEY `idx_email` (`email`),
 UNIQUE KEY `idx_username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+CREATE TABLE `ch_derechos` ( `NUM_DERECHO` int(11) NOT NULL AUTO_INCREMENT,
+`DESCRIPCION` varchar(50) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+PRIMARY KEY (`NUM_DERECHO`), UNIQUE KEY `idx_descripcion` (`DESCRIPCION`) )
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci; 
+
+CREATE TABLE `ch_derechosusuarios` ( `IDENTIDAD` int(11) NOT NULL AUTO_INCREMENT, 
+    `NUM_DERECHO` int(11) DEFAULT NULL, `idUsuario` int(11) DEFAULT NULL, 
+    PRIMARY KEY (`IDENTIDAD`), KEY `idx_derecho` (`NUM_DERECHO`), 
+    KEY `idx_usuario` (`idUsuario`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 -- ============================================================
 -- SQL PARA CREAR USUARIO newadmin CON PASSWORD HASHEADO
 -- ============================================================
