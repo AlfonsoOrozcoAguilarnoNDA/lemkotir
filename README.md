@@ -82,7 +82,7 @@ Prueba práctica de permisos
 ![Auditoría](pantallasinpermiso.png)
 
 ### 10. Muestra Sistema PHP con permiso (cambiap)
-Prueba prática de permisos
+Prueba práctica de permisos
 ![Auditoría](pantallaconpermiso.png)
 
 ---
