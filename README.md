@@ -61,9 +61,29 @@ Pantalla de cambio de password con validación de identidad y migración automá
 Monitor de salud del sistema. Verifica integridad de archivos, conteo de líneas y licencias GPL.
 ![Auditoría](pantallarevisabom.png)
 
-### 5. Mosaicos PGP (muestra_mosaicosphp)
+### 5. Mosaicos PHP (muestra_mosaicosphp)
 Monitor de salud del sistema. permite ver archivos pgp con fechade modificacion.
 ![Auditoría](pantallamosaicos.png)
+
+### 6. Cambio Imagen Perfil (upload_pherfil)
+Muestra la pantalla de cambio de imagen
+![Auditoría](pantallaperfil.png)
+
+### 7. Diagmostico y Password (diagnostico)
+Muestra la pantalla de  basesde datos y genera passwords
+![Auditoría](pantalladiagnostico.png)
+
+### 8. Cambia Permisos (permisos)
+Monitor de salud del sistema. permite ver archivos pgp con fechade modificacion.
+![Auditoría](pantallagestionpermisos.png)
+
+### 9. Muestra Sistema PHP sin permiso (cambiap)
+Prueba práctica de permisos
+![Auditoría](pantallasinpermiso.png)
+
+### 10. Muestra Sistema PHP con permiso (cambiap)
+Prueba prática de permisos
+![Auditoría](pantallaconpermiso.png)
 
 ---
 
