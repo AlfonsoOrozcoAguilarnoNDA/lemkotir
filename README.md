@@ -5,7 +5,7 @@
 
 **Lemkotir** (palabra rúnica de Diablo II para atraer riqueza) es un sistema de **Rutinas Base para un Sistema de Gestión** en PHP. Este repositorio es el resultado de un experimento de **Vibe Coding** realizado en marzo de 2026, enfocado en la eficiencia para empresas medianas en LATAM.
 
-La misión: Evaluar a **MiniMax-M2.5** como diseñador de interfaces profesionales, mientras el humano mantiene el control estricto de la seguridad y la arquitectura de datos. Se hicieron ajustes manuales y almomento no es 100% funcional. Mas informes en el sitio.
+La misión: Evaluar a **MiniMax-M2.5** como diseñador de interfaces profesionales, mientras el humano mantiene el control estricto de la seguridad y la arquitectura de datos. Se hicieron ajustes manuales y al momento no es 100% funcional. Mas informes en el sitio.
 
 ---
 
@@ -14,6 +14,7 @@ La misión: Evaluar a **MiniMax-M2.5** como diseñador de interfaces profesional
 Como parte de este experimento de co-programación, documentamos las fallas actuales para ser resueltas en futuras iteraciones:
 
 * **change_password.php:** Actualmente la lógica de verificación de passwords presenta fallas en el script generado por MiniMax. Se requiere una revisión manual de la función `password_verify` y la estructura de los hashes.
+* **upload_pherfil.php:** Actualmente no muestrael perfil por default.
 * **Optimización de Archivos:** De momento, el sistema es "verbose" (un solo archivo por función). En la siguiente fase, comprimiremos la lógica en menos archivos para mejorar la mantenibilidad.
 * **Prioridad Gráfica:** El enfoque actual es **100% estético y funcional en el frontend**. La depuración profunda de lógica de negocio se realizará una vez consolidada la interfaz de usuario.
 
