@@ -86,7 +86,7 @@ Prueba práctica de permisos
 Prueba práctica de permisos
 ![Auditoría](pantallaconpermiso.png)
 
-### 11. Control de expiracion de dominios (dominioshumano)
+### 11. Control de expiracion de dominios (dominiosminimaxhumano)
 
 ![Auditoría](dominios2.png)
 ---
