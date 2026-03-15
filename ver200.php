@@ -27,7 +27,7 @@
 
     Stack: PHP 8.x Procedural, Bootstrap 4.6.2, Font Awesome 5.15.4
     Asume config.php con $link (mysqli procedural)
-    Bonus :  Le pedí a Gemini una lista de lo dominios verificando el estatus (es el numero http),que tratara de detectar
+    Bonus :  Le pedí a Gemini una lista de los dominios verificando el estatus (es el numero http),que tratara de detectar
     si es wordpress que versión es y que me diera el porcentaje. Es bastante util cuando tienes que ver de un vistazo 78
     dominios, como tengo actualmente propios o de clientes. Cuando la cadena de farmacias de barrio, alla por los 2000,
     tenía que controlar mas de 400 dominios diariamente. El numero 200 indica OK en http. Se puede integrar despues en
