@@ -86,6 +86,9 @@ Prueba práctica de permisos
 Prueba práctica de permisos
 ![Auditoría](pantallaconpermiso.png)
 
+### 11. Control de expiracion de dominios (dominioshumano)
+
+![Auditoría](dominios2.png)
 ---
 
 ## 🧪 Notas del Autor (Bitácora de Vibe Coding)
