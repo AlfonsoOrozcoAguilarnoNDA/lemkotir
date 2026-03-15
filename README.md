@@ -63,7 +63,7 @@ Monitor de salud del sistema. Verifica integridad de archivos, conteo de líneas
 ![Auditoría](pantallarevisabom.png)
 
 ### 5. Mosaicos PHP (muestra_mosaicosphp)
-Monitor de salud del sistema. permite ver archivos pgp con fechade modificacion.
+Monitor de salud del sistema. Permite ver archivos php con fecha de modificacion.
 ![Auditoría](pantallamosaicos.png)
 
 ### 6. Cambio Imagen Perfil (upload_pherfil)
@@ -71,11 +71,11 @@ Muestra la pantalla de cambio de imagen
 ![Auditoría](pantallaperfil.png)
 
 ### 7. Diagmostico y Password (diagnostico)
-Muestra la pantalla de  basesde datos y genera passwords
+Muestra la pantalla de  bases de datos y genera passwords
 ![Auditoría](pantalladiagnostico.png)
 
 ### 8. Cambia Permisos (permisos)
-Monitor de salud del sistema. permite ver archivos pgp con fechade modificacion.
+Monitor de salud del sistema. Permite cambiar permisos de usuarios
 ![Auditoría](pantallagestionpermisos.png)
 
 ### 9. Muestra Sistema PHP sin permiso (cambiap)
