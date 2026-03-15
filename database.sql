@@ -34,7 +34,19 @@ CREATE TABLE `ch_derechosusuarios` ( `IDENTIDAD` int(11) NOT NULL AUTO_INCREMENT
     PRIMARY KEY (`IDENTIDAD`), KEY `idx_derecho` (`NUM_DERECHO`), 
     KEY `idx_usuario` (`idUsuario`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
-
+CREATE TABLE `dominios2020` (
+  `dominio` varchar(65) NOT NULL,
+  `servidores` varchar(250) NOT NULL,
+  `registered` date DEFAULT NULL,
+  `expiration` date DEFAULT NULL,
+  `registrar` varchar(50) DEFAULT NULL,
+  `showit` varchar(3) DEFAULT 'YES',
+  `iscustomer` varchar(3) NOT NULL DEFAULT 'NO',
+  `type` varchar(25) NOT NULL,
+  `NOTA` varchar(2000) DEFAULT NULL,
+  `last_updated` date DEFAULT NULL,
+  PRIMARY KEY (`dominio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `LINK_CATEGORIES` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
