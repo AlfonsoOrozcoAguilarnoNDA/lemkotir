@@ -39,7 +39,7 @@ Como parte de este experimento de co-programación, documentamos las fallas actu
 1.  **Base de Datos:** Ejecuta el script `database.sql`. Incluye un `DROP TABLE IF EXISTS` para una instalación limpia.
 2.  **Credenciales Base:** * **Usuario:** `newadmin`
     * **Password:** `lemkotir*`
-    * ⚠️ *Se sugiere cambiar la contraseña inmediatamente después del primer acceso.* Pueedeshacerlo en labase de datos en campo password
+    * ⚠️ *Se sugiere cambiar la contraseña inmediatamente después del primer acceso.* Pueedes hacerlo en la base de datos en campo password
 3.  **Configuración:** Crea tu archivo `config.php` basándote en la estructura centralizada de conexión `$link`.
 
 ---
