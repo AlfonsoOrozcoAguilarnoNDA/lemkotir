@@ -89,6 +89,12 @@ Prueba práctica de permisos
 ### 11. Control de expiracion de dominios (dominiosminimaxhumano)
 
 ![Auditoría](dominios2.png)
+
+### 12 ver200.php — Monitor de Salud HTTP (LGPL 2.1)
+Generado por Gemini 3 Fast en dos iteraciones. Verifica estatus 
+HTTP de todos los dominios activos, detecta WordPress y versión,
+y calcula tasa de error global. ~15 segundos para 78 dominios.
+**Limitación conocida:** verifica solo http://, no https://.
 ---
 
 ## 🧪 Notas del Autor (Bitácora de Vibe Coding)
