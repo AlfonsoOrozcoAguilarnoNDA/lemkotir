@@ -24,6 +24,7 @@
     Integración:        Gemini 3 Fast (dos iteraciones por mejoras)
     Fecha:              15 de marzo de 2026
     Experimento:        https://vibecodingmexico.com/vibecoding-control-de-dominios/
+    Limitacion          verifica solo http://, no https://.
 
     Stack: PHP 8.x Procedural, Bootstrap 4.6.2, Font Awesome 5.15.4
     Asume config.php con $link (mysqli procedural)
