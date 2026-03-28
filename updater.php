@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $confirmado_check && $confirmado_te
     echo '<div style="background:#f8d7da; padding:15px; border-radius:5px;">';
     echo '<b>🔥 OPCIONAL: ¿Borrar archivos que no están en Git?</b><br>';
     echo 'Escribe <b>SI</b> para confirmar <code>git clean</code>: ';
-    echo '<input type="text" name="borrar_basura" value='NO' placeholder="SI o NO" style="padding:5px; width:80px; text-align:center;">';
+    echo '<input type="text" name="borrar_basura" value="NO" placeholder="SI o NO" style="padding:5px; width:80px; text-align:center;">';
     echo '</div>';
 
     echo '<br><button type="submit" style="padding:15px; cursor:pointer; background:#dc3545; color:#fff; border:none; border-radius:5px; font-weight:bold; width:100%;">🚀 SINCRONIZAR AHORA</button>';
