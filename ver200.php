@@ -79,7 +79,7 @@ $i = 1;
     <meta charset="UTF-8">
     <title>Reporte de Salud Lemkotir</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <style>
         body { background-color: #f8f9fa; font-size: 0.9rem; }
         .timestamp { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 8px 8px 0 0; }
