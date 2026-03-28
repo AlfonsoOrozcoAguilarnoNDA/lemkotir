@@ -331,7 +331,7 @@ if ($accion === 'editar_link' && isset($_GET['id'])) {
     <meta name="robots" content="noindex, nofollow">
     <title>Favoritos - Lemkotir</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <style>
         :root {
             --metro-blue: #3498db;
