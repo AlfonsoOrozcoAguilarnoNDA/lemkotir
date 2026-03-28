@@ -70,7 +70,7 @@ Monitor de salud del sistema. Permite ver archivos php con fecha de modificacion
 Muestra la pantalla de cambio de imagen
 ![Auditoría](pantallaperfil.png)
 
-### 7. Diagmostico y Password (diagnostico)
+### 7. Diagnóstico y Password (diagnostico)
 Muestra la pantalla de  bases de datos y genera passwords
 ![Auditoría](pantalladiagnostico.png)
 
