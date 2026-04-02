@@ -23,8 +23,8 @@
     Lógica WHOIS:       Alfonso Orozco Aguilar (versión humana)
     Apariencia visual:  Estándar MiniMax-M2.5 (vibecodingmexico.com)
     Altas y bajas:      MiniMax-M2.5
-    Integración:        Claude Sonnet 4.6 (claude-sonnet-4-6)
-    Fecha:              15 de marzo de 2026
+    Integración:        Claude Sonnet 4.6 (claude-sonnet-4-6) y bug de duplicado.
+    Fecha:              15 de marzo de 2026 y correccion 2 de abril 2026
     Experimento:        https://vibecodingmexico.com/vibecoding-control-de-dominios/
 
     Stack: PHP 8.x Procedural, Bootstrap 4.6.2, Font Awesome 5.15.4
@@ -38,7 +38,7 @@ header('Pragma: no-cache');
 header('Expires: 0');
 
 session_start();
-include_once 'config.php';
+include_once '../abyss/config.php';
 global $link;
 
 // ============================================================
@@ -400,8 +400,20 @@ if ($accion === 'agregar' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $NOTA       = $_POST['NOTA']       ?? '';
 
     if (empty($dominio)) {
-        $mensaje = 'El dominio es obligatorio';
-        $tipo_mensaje = 'danger';
+    $mensaje = 'El dominio es obligatorio';
+    $tipo_mensaje = 'danger';
+} else {
+    // ✅ Verificar si ya existe
+    $stmt_check = mysqli_prepare($link, "SELECT COUNT(*) FROM dominios2020 WHERE dominio = ?");
+    mysqli_stmt_bind_param($stmt_check, 's', $dominio);
+    mysqli_stmt_execute($stmt_check);
+    mysqli_stmt_bind_result($stmt_check, $count);
+    mysqli_stmt_fetch($stmt_check);
+    mysqli_stmt_close($stmt_check);
+
+    if ($count > 0) {
+        $mensaje      = 'El dominio ' . htmlspecialchars($dominio) . ' ya existe en el sistema.';
+        $tipo_mensaje = 'warning';
     } else {
         $stmt = mysqli_prepare($link,
             "INSERT INTO dominios2020 (dominio, servidores, type, iscustomer, NOTA, showit, last_updated)
@@ -415,6 +427,8 @@ if ($accion === 'agregar' && $_SERVER['REQUEST_METHOD'] === 'POST') {
             $tipo_mensaje = 'danger';
         }
     }
+}
+
     $accion = 'listado';
 }
 
